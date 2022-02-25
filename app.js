@@ -8,14 +8,6 @@ const button4 = document.querySelector("#button4");
 
 const image = document.querySelector("img");
 
-// if (score1.innerText === 1 && score2.innerText === 0) {
-//     image.src = "https://media.istockphoto.com/photos/two-children-boy-brothers-playing-rock-scissors-paper-game-picture-id1221055207?k=20&m=1221055207&s=612x612&w=0&h=L-uzBiYSIopmR5I_mA3JCoB6CVz2QAgJTvz8jHIbz38=";
-//     document.body.style.backgroundColor = "black";
-// }
-// if (score1.innerText === 0 && score2.innerText === 1) {
-//     image.src = "https://media.istockphoto.com/photos/two-children-boy-brothers-playing-rock-scissors-paper-game-picture-id1221055207?k=20&m=1221055207&s=612x612&w=0&h=L-uzBiYSIopmR5I_mA3JCoB6CVz2QAgJTvz8jHIbz38=";
-//     document.body.style.backgroundColor = "black";
-// }
 
 
 let i = 0;
@@ -29,6 +21,9 @@ button1.addEventListener('click', function (e) {
         image.src = "https://img.itch.zone/aW1nLzI2MjcwNDkuanBn/original/sKumwl.jpg";
         document.body.style.backgroundColor = "#e07a5f";
         button4.disabled = false;
+        button1.disabled = true;
+        button2.disabled = true;
+        button3.disabled = true;
         // i = 0;
         // j = 0;
         // score1.innerText = `${i}`;
@@ -48,6 +43,9 @@ button2.addEventListener('click', function (e) {
         console.log("player 2 won");
         document.body.style.backgroundColor = "#81b29a";
         button4.disabled = false;
+        button1.disabled = true;
+        button2.disabled = true;
+        button3.disabled = true;
         // i = 0;
         // j = 0;
         // score1.innerText = `${i}`;
@@ -74,5 +72,8 @@ button4.addEventListener('click', function (e) {
     j = 0;
     score1.innerText = `${i}`;
     score2.innerText = `${j}`;
+    button1.disabled = false;
+    button2.disabled = false;
+    button3.disabled = false;
 });
 
